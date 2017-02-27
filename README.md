@@ -3,11 +3,15 @@
 I was curious how to write my tests and implementation together in the same file. 
 
 ```clojure
+(ns with-test-test.core
+  (:require [clojure.test :refer :all]))
+
 (with-test
-    (defn my-function [x y]
-      (+ x y))
-  (is (= 4 (my-function 2 2)))
-  (is (= 7 (my-function 3 4))))
+  (defn my-add [x y] (+ x y))
+  (testing "adding two zeros"
+    (is (= 0 (my-add 0 0))))
+  (testing "adding one and zero"
+    (is (= 1 (my-add 0 1)))))
 ```
 
 # Using with Cider
@@ -18,4 +22,8 @@ Then, if you have a running REPL, you can hit <CTRL-c ,> to run the tests.
 
 # Run all tests before building
 
-lein test with-test-test.core
+```
+$ lein test with-test-test.core
+```
+
+
