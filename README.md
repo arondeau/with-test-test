@@ -10,11 +10,11 @@ I was curious how to write my tests and implementation together in the same file
   (is (= 7 (my-function 3 4))))
 ```
 
-# Cider
+# Using with Cider
 
-You'll need to set (setq cider-test-infer-test-ns (lambda (ns) ns)) in ~/.emacs.d/init.el, found via https://github.com/clojure-emacs/cider/issues/784
+To run tests fron a non '-test' namespace, you'll need to set (setq cider-test-infer-test-ns (lambda (ns) ns)) in ~/.emacs.d/init.el. (Found via https://github.com/clojure-emacs/cider/issues/784)
 
-Then you can run <CTRL-c ,> to run the tests.
+Then, if you have a running REPL, you can hit <CTRL-c ,> to run the tests.
 
 # Run all tests before building
 
