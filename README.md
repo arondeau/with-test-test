@@ -18,7 +18,7 @@ I was curious how to write my tests and implementation together in the same file
 
 To run tests fron a non '-test' namespace, you'll need to set 
 
-```
+```lisp
 (setq cider-test-infer-test-ns (lambda (ns) ns))
 ```
 
@@ -30,7 +30,7 @@ Then, if you have a running REPL with Cider in Emacs, you can hit `CTRL-c ,` to 
 
 # Run all tests before building
 
-```
+```bash
 $ lein test with-test-test.core
 ```
 
